@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Step with T.Nahl</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f7f4ff;--card:#fff;--ink:#241a3d;--mut:#6a6283;--line:#e8e0f8;--soft:#efe8ff;
+--c1:#14b8a6;--c2:#7c3aed;--c3:#f59e0b;--c4:#ec4899;--sh:0 8px 24px rgba(88,60,160,.12)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#140f1f;--card:#1e1731;--ink:#f4efff;--mut:#b9aed2;--line:#352a52;--soft:#2a2045;--sh:0 8px 24px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#140f1f;--card:#1e1731;--ink:#f4efff;--mut:#b9aed2;--line:#352a52;--soft:#2a2045;--sh:0 8px 24px rgba(0,0,0,.4)}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Tajawal',system-ui,sans-serif;line-height:1.8}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);padding:6px 14px;border-radius:99px;font-size:14px;font-weight:700}
+nav a:first-child{background:linear-gradient(90deg,var(--c2),var(--c4));color:#fff}
+nav a:hover{background:var(--soft)}
+.hero{position:relative;overflow:hidden;text-align:center;color:#fff;padding:54px 20px 70px;background:linear-gradient(135deg,#6d28d9,#c026d3 55%,#f472b6)}
+.hero i{position:absolute;border-radius:50%;background:rgba(255,255,255,.14)}
+.hero i:nth-child(1){width:180px;height:180px;top:-60px;inset-inline-start:-50px}
+.hero i:nth-child(2){width:120px;height:120px;bottom:-30px;inset-inline-end:8%}
+.hero i:nth-child(3){width:60px;height:60px;top:30%;inset-inline-end:12%;background:rgba(253,224,71,.5)}
+.hero>*{position:relative}
+.logo{font-size:44px}
+.en{font-family:'Fredoka',Georgia,sans-serif;direction:ltr;font-size:clamp(32px,9vw,56px);margin:4px 0;line-height:1.15}
+.hero p{max-width:540px;margin:8px auto;opacity:.95}
+.badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:6px 18px;font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.btn{background:#fff;color:#7c3aed;text-decoration:none;padding:11px 22px;border-radius:14px;font:inherit;font-weight:800;border:0;cursor:pointer;box-shadow:var(--sh)}
+.btn.alt{background:transparent;color:#fff;border:2px solid #fff}
+.btn.dark{background:var(--c2);color:#fff}
+main{max-width:920px;margin:-40px auto 0;padding:0 16px 40px;position:relative}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tile{display:block;text-decoration:none;color:#fff;border-radius:20px;padding:16px;box-shadow:var(--sh);transition:transform .2s}
+.tile:hover{transform:translateY(-4px)}
+.tile b{display:block;font-size:30px;line-height:1.3}.tile span{font-weight:800;font-size:17px}.tile small{display:block;opacity:.9}
+.t1{background:linear-gradient(135deg,#0d9488,#2dd4bf)}.t2{background:linear-gradient(135deg,#6d28d9,#a78bfa)}
+.t3{background:linear-gradient(135deg,#d97706,#fbbf24)}.t4{background:linear-gradient(135deg,#be185d,#f472b6)}
+section{margin-top:40px;background:var(--card);border-radius:24px;box-shadow:var(--sh);overflow:hidden;border:1px solid var(--line)}
+.sh{padding:18px 20px;color:#fff}
+.sh h2{margin:0;font-size:24px}.sh p{margin:0;opacity:.95}
+#found .sh{background:linear-gradient(135deg,#0d9488,#2dd4bf)}#enrich .sh{background:linear-gradient(135deg,#6d28d9,#a78bfa)}
+#remedial .sh{background:linear-gradient(135deg,#d97706,#fbbf24)}#family .sh{background:linear-gradient(135deg,#be185d,#f472b6)}
+.body{padding:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.card h3{margin:0;font-size:17px}
+.tag{font-size:12px;font-weight:800;color:var(--c2)}
+.card ul{margin:6px 0 0;padding-inline-start:20px}
+.tech{background:var(--soft);border-radius:14px;padding:12px 16px;margin-top:12px;border-inline-start:5px solid var(--c1)}
+.lay{color:var(--mut);font-size:14px;margin:10px 0 0}
+.lv{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.lv span{font-size:12px;border-radius:99px;padding:2px 10px;background:var(--soft);font-weight:800}
+.quiz button.o{display:block;width:100%;text-align:start;margin:6px 0;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer;direction:ltr}
+.quiz button.ok{background:#16a34a;color:#fff;border-color:#16a34a}.quiz button.no{background:#dc2626;color:#fff;border-color:#dc2626}
+.q{direction:ltr;font-weight:800;font-size:18px;margin:4px 0}
+footer{text-align:center;padding:30px 16px;color:#fff;background:linear-gradient(135deg,#4c1d95,#9d174d)}
+#top{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-start:16px;width:46px;height:46px;border-radius:50%;border:0;background:var(--c2);color:#fff;font-size:20px;cursor:pointer;box-shadow:var(--sh);z-index:9}
+</style>
+</head>
+<body>
+<nav>
+<a href="#home">🏠 الرئيسية</a><a href="#found">🎮 التأسيس</a><a href="#enrich">🚀 الإثراء</a><a href="#remedial">🌱 العلاجي</a><a href="#family">👨‍👩‍👧 الأسرة</a>
+</nav>
+
+<header class="hero" id="home">
+<i></i><i></i><i></i>
+<div class="logo">📚✨</div>
+<h1 class="en">English Step with T.Nahl</h1>
+<p>خطوة بعد خطوة… نصل إلى لغة إنجليزية واثقة</p>
+<div class="badge">معلمة المادة: نهلا الزايدي · Teacher: Nahla Alzaidy</div>
+<p>أهلاً بكِ! ألعاب وأنشطة تناسب مستواكِ، وأسرتكِ شريكة في النجاح.</p>
+<div class="btns"><a class="btn" href="#found">أنا طالبة 🎒</a><a class="btn alt" href="#family">أنا وليّ أمر 💜</a></div>
+</header>
+
+<main>
+<div class="tiles">
+<a class="tile t1" href="#found"><b>🎮</b><span>التأسيس والتقنية</span><small>ألعاب وكويزات</small></a>
+<a class="tile t2" href="#enrich"><b>🚀</b><span>الأنشطة الإثرائية</span><small>تحديات للمتفوقات</small></a>
+<a class="tile t3" href="#remedial"><b>🌱</b><span>البرامج العلاجية</span><small>تقوية خطوة بخطوة</small></a>
+<a class="tile t4" href="#family"><b>👨‍👩‍👧</b><span>الشراكة الأسرية</span><small>ركن أولياء الأمور</small></a>
+</div>
+
+<section id="found">
+<div class="sh"><h2>🎮 التأسيس وتفعيل التقنية</h2><p>نتعلم الحروف والكلمات والقواعد باللعب</p></div>
+<div class="body">
+<div class="grid">
+<div class="card"><h3>Letter Land</h3><span class="tag">الحروف</span><ul><li>Match the Letter: مطابقة الحرف بصوته</li><li>Phonics Pop: فقاعات الأصوات</li></ul></div>
+<div class="card"><h3>Word Garden</h3><span class="tag">الكلمات</span><ul><li>Picture &amp; Word: صورة وكلمة</li><li>Spelling Bee: نحلة الإملاء</li></ul></div>
+<div class="card"><h3>Grammar Quest</h3><span class="tag">القواعد</span><ul><li>Is / Am / Are Challenge</li><li>Build the Sentence: رتبي الجملة</li></ul></div>
+</div>
+<div class="card quiz" style="margin-top:12px"><span class="tag">⚡ كويز سريع · Quick Quiz</span><div id="qbox"></div></div>
+<div class="tech"><b>تفعيل التقنية:</b> ألعاب عبر Wordwall وQuizizz وKahoot، فيديوهات قصيرة، وروابط تفاعلية أسبوعية، مع لوحة نجوم للمتميزات.</div>
+<p class="lay"><b>التخطيط:</b> بطاقات الأنشطة، ثم كويز تفاعلي، ثم اللعبة الأسبوعية.</p>
+</div></section>
+
+<section id="enrich">
+<div class="sh"><h2>🚀 الأنشطة الإثرائية</h2><p>للمتفوقات: تحدٍّ يوسّع المنهج</p></div>
+<div class="body">
+<div class="grid">
+<div class="card"><h3>Book Club 📖</h3><ul><li>Story of the Month: قصة الشهر</li><li>Character Detective</li></ul></div>
+<div class="card"><h3>Creative Missions 🎨</h3><ul><li>Write a Comic Strip</li><li>Record a 1-Minute Podcast</li></ul></div>
+<div class="card"><h3>Challenge Zone 🏆</h3><ul><li>Debate Day: نقاش بالإنجليزية</li><li>Word Master: مفردات متقدمة</li></ul></div>
+</div>
+<div class="tech"><b>تفعيل التقنية:</b> قصص مصورة عبر Canva، تسجيل صوتي، ومعرض إلكتروني لأعمال الطالبات.</div>
+<p class="lay"><b>التخطيط:</b> «مهمة الشهر» في الأعلى، ثم النوادي والتحديات، ثم معرض الأعمال.</p>
+</div></section>
+
+<section id="remedial">
+<div class="sh"><h2>🌱 البرامج العلاجية والتقوية</h2><p>كل طالبة تبدأ من حيث هي وتتقدم بثقة</p></div>
+<div class="body">
+<div class="grid">
+<div class="card"><h3>Easy Lessons</h3><ul><li>Alphabet in 5 Minutes</li><li>My First 100 Words</li></ul></div>
+<div class="card"><h3>Worksheets 📝</h3><div class="lv"><span>⭐ سهل</span><span>⭐⭐ متوسط</span><span>⭐⭐⭐ أقوى</span></div><ul><li>أوراق عمل متدرجة قابلة للطباعة</li></ul></div>
+<div class="card"><h3>My Support Plan 💪</h3><ul><li>خطة أسبوعية مخصصة</li><li>Progress Stars: متابعة التقدم</li></ul></div>
+</div>
+<div class="tech"><b>تفعيل التقنية:</b> مقاطع شرح مبسطة، تمارين نطق صوتية، واختبار قصير يحدد المستوى ويقترح الخطة.</div>
+<p class="lay"><b>التخطيط:</b> تحديد المستوى، فالدروس، فأوراق العمل، فخطة الدعم.</p>
+</div></section>
+
+<section id="family">
+<div class="sh"><h2>👨‍👩‍👧 مبادرة الشراكة الأسرية</h2><p>ركن أولياء الأمور: البيت والمدرسة فريق واحد</p></div>
+<div class="body">
+<div class="grid">
+<div class="card"><h3>نصائح لدعم ابنتكم</h3><ul><li>١٠ دقائق يومياً للقراءة معاً</li><li>اطلبي منها: «علميني كلمة جديدة»</li><li>احتفلوا بكل تقدم صغير</li></ul></div>
+<div class="card"><h3>مواد للمشاركة</h3><ul><li>بطاقات مفردات للطباعة</li><li>تحدي الأسبوع العائلي</li><li>أفلام وأغانٍ مناسبة</li></ul></div>
+<div class="card"><h3>التواصل والتعليق</h3><ul><li>تقرير تقدم شهري مبسط</li><li>صندوق اقتراحات وتعليقات</li><li>لقاء رقمي دوري</li></ul></div>
+</div>
+<div class="tech"><b>تفعيل الشراكة:</b> مشاركة الأنشطة عبر واتساب، تحدٍّ عائلي أسبوعي، وشهادة شكر لأسرة الشهر.</div>
+<div class="btns"><button class="btn dark" id="share">🔗 شاركي الموقع</button></div>
+</div></section>
+</main>
+
+<footer><b style="font-size:20px">English Step with T.Nahl</b><br>معلمة المادة: نهلا الزايدي · Teacher: Nahla Alzaidy</footer>
+<button id="top" aria-label="للأعلى" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const Q=[["She ___ a student.",["is","are","am"],0],["Which word starts with B?",["Apple","Ball","Cat"],1],["I ___ happy.",["is","am","are"],1]];
+let i=0,s=0;const box=document.getElementById('qbox');
+function show(){
+ if(i>=Q.length){box.innerHTML='<p class="q">⭐ Score: '+s+' / '+Q.length+'</p><button class="btn dark" onclick="i=0;s=0;show()">إعادة</button>';return}
+ const q=Q[i];box.innerHTML='<p class="q">'+q[0]+'</p>';
+ q[1].forEach((t,k)=>{const b=document.createElement('button');b.className='o';b.textContent=t;
+  b.onclick=()=>{b.classList.add(k===q[2]?'ok':'no');if(k===q[2])s++;box.querySelectorAll('button').forEach(x=>x.disabled=true);setTimeout(()=>{i++;show()},800)};box.appendChild(b)});
+}
+show();
+document.getElementById('share').onclick=async()=>{
+ try{if(navigator.share){await navigator.share({title:'English Step with T.Nahl',url:location.href})}else{await navigator.clipboard.writeText(location.href);alert('تم نسخ الرابط')}}catch(e){}
+};
+</script>
+</body>
+</html>
